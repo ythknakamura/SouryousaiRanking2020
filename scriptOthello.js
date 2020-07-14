@@ -85,7 +85,7 @@ function CreateResultTable2(rawdata) {
         let tot = $('<td />').text(score[TOT_ID]);
         let win = $('<td />').text(score[WIN_ID]);
         let lose = $('<td />').text(score[LOSE_ID]);
-        let rate = $('<td />').text(winrate + "%");
+        let rate = $('<td />').text(winrate.toFixed(1) + "%");
         tr.append(rank, player, tot, win, lose, rate);
         tbody.append(tr);
     });
