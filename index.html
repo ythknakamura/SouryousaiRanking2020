@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Ranking System</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script type="text/javascript" src="ncmb.min.js" charset="utf-8"></script>
+    <script src="jquery-3.5.1.slim.min.js"></script>
+    <script src="scriptOthello.js"></script>
+    <script src="scriptDanmaku.js"></script>
+</head>
+
+<body>
+    <h1>ランキング</h1>
+    <div class="splitbox">
+        <div>
+            <h2>青峰弾幕祭</h2>
+            <div class="tabSetD tabSet">
+                <ul class="tabsD">
+                    <li><a id="Easy" class="on">Easy</a></li>
+                    <li><a id="Normal">Normal</a></li>
+                    <li><a id="Hard">Hard</a></li>
+                    <li><a id="Lunatic">Lunatic</a></li>
+                    <!--<li><a id="Debug">Debug</a></li> -->
+                </ul>
+                <div id="panelDanmaku"></div>
+            </div>
+        </div>
+        <div>
+            <h2>接待オセロ</h2>
+            <div class="tabSetO tabSet">
+                <ul class="tabsO">
+                    <li><a href="#panelResult" id="Result" class="on">AIの対人成績</a></li>
+                    <li><a href="#panelLog" id="Log" >対戦履歴</a></li>
+                </ul>
+                <div class="pannel" id="panelResult">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>順位</th>
+                                <th>AI</th>
+                                <th>対戦数</th>
+                                <th>勝ち数</th>
+                                <th>負け数</th>
+                                <th>勝率</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ResultBody"></tbody>
+                    </table>
+                </div>
+                <div class="pannel" id="panelLog">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>日時</th>
+                                <th>黒プレーヤ</th>
+                                <th>白プレーヤ</th>
+                                <th>黒のスコア</th>
+                            </tr>
+                        </thead>
+                        <tbody id="LogBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
